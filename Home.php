@@ -171,11 +171,11 @@
             <br>
             <div class="row">
             <div class="col"><p>
-  <button type="button" class="btn btn-secondary btn-sm">Descargar totales</button></p></div>
+  <button type="button" class="btn btn-secondary btn-lg btn-block">Descargar totales</button></p></div>
   
-  <div class="col"><p> <button type="button" class="btn btn-success btn-sm">Prioridad Baja</button></p></div>
-  <div class="col"><p> <button type="button" class="btn btn-warning btn-sm">Prioridad Media</button></p></div>
-  <div class="col"><p> <button type="button" class="btn btn-danger btn-sm">Prioridad Alta</button></p></div>
+  <div class="col"> <p> <button type="button" class="btn btn-success btn-lg btn-block" onclick="location.href='Listado_prioridad_baja.php'">Prioridad Baja</button></p></div>
+  <div class="col"><p> <button type="button" class="btn btn-warning btn-lg btn-block" onclick="location.href='Listado_prioridad_baja.php'">Prioridad Media</button></p></div>
+  <div class="col"><button type="button" class="btn btn-danger btn-lg btn-block" style="height:83%" onclick="location.href='Listado_prioridad_baja.php'">Prioridad Alta</button></div>
 
   </div> 
 
@@ -185,7 +185,7 @@
   <br>
 
   <section class="content-header">
-					<h3 class="text-center"> 5 reportes recientes </h3>
+					<h3 class="text-center"> 5 Reportes Recientes </h3>
 				</section>
 
 				<section class="content">
@@ -280,7 +280,7 @@
 
 
                 <section class="content-header">
-					<h3 class="text-center"> 5 reportes prioridad alta</h3>
+					<h3 class="text-center"> 5 Reportes Prioridad Alta</h3>
 				</section>
 
 				<section class="content">
