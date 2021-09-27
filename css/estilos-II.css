@@ -1,0 +1,142 @@
+/* -------- Estilos Generales -------- */
+body{
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.4em;
+  background-color: #e9e3e3;
+}
+/* -------- Estilos del header -------- */
+.header{
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.img-logo-Sigied, .img-letras-infraestructura, .img-logo-Ch{
+  height: 60px;
+  }
+
+  .img-letras-infraestructura{
+    margin-left: 50px;
+  }
+
+-------- Estilos Menu de navegacion -------- */
+.navbar {
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.header a{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: rgb(39, 83, 86);
+  text-decoration: none;
+  transition: all 0.4s linear;
+  border-radius: 2px;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navbar ul li {
+  display: inline-block;
+}
+.navbar a:hover {
+  box-shadow: 0 1.5px 4px rgb(39, 83, 86);;
+}
+.seleccionado {
+  font-weight: bold;
+}
+/*---*/
+.franja-central {
+  height: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  /*background-color: rgb(39, 156, 130); */
+  background-color: #64b6d1;
+  box-shadow: 0 15px 20px rgba(161, 161, 161, .8);
+}
+.franja-escuelas {
+  height: 100px
+}
+/* -------- Estilos Contenido central -------- */
+.main {
+  margin: auto;
+  width: 80%;
+  max-width: 1400px;
+}
+.main-titulo {
+  color: rgb(39, 83, 86);
+}
+/* -------- Estilos Pie de Pagina -------- */
+.footer {
+  height: 150px;
+  position: relative;
+  margin-top: 100px;
+  bottom: 0;
+  background-color: #424242;
+  color: #fff;
+}
+
+.footer-contenido {
+  height: 50px;
+  text-align: center;
+  padding: 20px;
+  background-color: #424242;
+}
+
+.footer-texto {
+  font-size: 1rem;
+}
+.pantalla-nuevo-reclamo{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        margin-top: 100px;
+    }
+    .pantalla-pasos-reclamo{
+        width: 20%;
+        background-color: #fff;
+    }
+    .contenedor-pasos li{
+        list-style: none;
+        display: block;
+        border: solid .5px #666;
+        border-radius: 3px;
+        cursor: pointer;
+        margin: .5rem;
+        text-align: center;
+    }
+    .contenedor-pasos li:hover{
+        background-color: #aae5f8;
+    }
+    .contenedor-reporte{
+        width: 70%;
+        height: 100%;
+        border: solid .5px #666;
+        box-shadow: 1px 1px 3px ;
+        background-color: #fff;
+    }
+    .datos-generales, .detalle-elemento{
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0  100px 50px 100px;
+    }
+    .titulo{
+        width: 100%;
+        background-color: #64b6d1;
+        color: #fff;
+        margin-bottom: 50px;
+    }
+    .seleccionado{
+        background-color: #64b6d1;
+        color: #fff;
+    }
+    .oculto{
+        display: none;
+    }

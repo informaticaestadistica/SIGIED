@@ -1,0 +1,60 @@
+header {
+  /*GRIS #e8e4e3; NARANJA F #f6ab2b; NARANJA P #fec76c*;  fondo #eee5e6"*/  
+  background-color: white ;
+  height: 70px;
+
+}
+
+body {
+  background-color: #8cc1d1;
+}
+.bg {
+  height: calc(100vh - 65px - 70px);
+  background-image: url('../img/bk_2 (2).png');
+  background-repeat: no-repeat;
+  background-position: right, bottom;
+  background-size: contain;
+}
+.bgcard {
+
+  background-image: url('../img/pie.png');
+  background-position:center ;
+  background-repeat: no-repeat;
+  background-size: 50%;
+
+}
+.login{
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  background-color: rgb(215 214 215 / 40%);
+  box-shadow: 0 0px 6px rgba(0 0 0 / .5);
+  border-radius: 10px;
+}
+
+.footer {
+  width: 100%;
+  height: 65px; 
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(128, 125, 125, 0.521);
+}
+
+.titulo {
+  font-size: 150%;
+  color:#0c1216;
+  text-align:center;
+  font-family:Andale Mono, monospace;
+  
+}
+
+@media only screen and (max-width: 660px) {
+  .logoMCLetras{display: none;}
+  .bg {
+    background-position: bottom;
+    background-size: contain;
+  }
+}
+#nuevoReclamo{
+  background-color: rgba(0,0,0, 0.5) !important;
+}
