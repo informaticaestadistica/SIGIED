@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>Sigied: Inicio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sigied: Reclamos</title>
+    <?php
+        require 'head.php';
+    ?>
 
-    <link rel = "icon" href = "img/SiGiEd.png" type = "image/png"> 
-    <link rel="stylesheet" type="text/css" href="css/estilos-II.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
 <style>
     
+    main{
+        min-height: 70vh;
+    }
+
     .pantalla-nuevo-reclamo{
         display: flex;
         width: 100%;
@@ -38,9 +41,10 @@
         width: 70%;
         height: 100%;
         border: solid .5px #666;
-        box-shadow: 1px 1px 3px ;
+        box-shadow: 1px 1px 5px ;
+        background-image: linear-gradient( 109.6deg,  rgba(223,234,247,1) 11.2%, rgba(244,248,252,1) 91.1% );
     }
-    .datos-generales, .detalle-elemento{
+    .formulario {
         width: 100%;
         height: 100%;
         box-sizing: border-box;
@@ -59,29 +63,18 @@
     .oculto{
         display: none;
     }
+    .btn{
+        cursor: pointer;
+    }
 </style>
 
 
 
 <body>
 	<header class="header">
-        <div class="hearder-logo">
-            <img src="img/SiGied_logo_b" class="img-logo-Sigied">
-            
-        </div>
-        <div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#" class="seleccionado">Inicio</a></li>
-                <li><a href="#">Mis Pedidos</a></li>
-                <li><a href="#">Nuevo Pedido</a></li>
-                <a href="#">Salir</a>
-            </ul>
-        </nav>
-        </div>
-    </header>
-    <div class="franja-central">
-    </div>
+        <?php
+            require 'header.php';
+        ?>
     <main class="main">
     	<div class="pantalla-nuevo-reclamo">
             <div class="pantalla-pasos-reclamo">
@@ -95,123 +88,235 @@
                 </div>
             </div>
             <div class="contenedor-reporte">
-                <form action="#" method="POST">
+                <form action="controller.php" method="POST">
                     <div class="titulo">
                         <h1 class="text-center" id="titulo">Datos Generales</h1>
                     </div>
-                    <div class="datos-generales" id="datos-generales">
+<!--############################### Pantalla de Datos Generales #################################################-->                    
+                    <fieldset class="formulario" id="datos-generales">
+
                         <div class="row" >
                             <div class="col">
-                                <h5 class="fonyt-weigth-bold">Escuela N°: <span class="font-weight-light text-center">1</span></h5>
+                                <label>
+                                    <h5 class="font-weigth-bold">Escuela N°:</h5>
+                                </label>
+                                    <input type="text" name="escuela-nro"  class=" form-control" readonly disabled>
                             </div>
                             <div class="col">
-                                <h5 class="fonyt-weigth-bold">N° Anexo: <span class="font-weight-light text-center">0</span></h5>
+                                <label>
+                                   <h5 class="font-weigth-bold">N° Anexo:</h5>
+                                </label>
+                                <input type="text" class="form-control" name="escuela-anexo" disabled readonly required>
                             </div>
                         </div>
                         <div class="row" >
                             <div class="col">
-                                <h5 class="fonyt-weigth-bold">Fecha: <span class="font-weight-light text-center">22/2021</span></h5>
+                                <label>
+                                    <h5 class="font-weigth-bold">Fecha:</h5>
+                                </label>
+                                <input type="text" class="form-control" disabled readonly required>
                             </div>
                             <div class="col">
-                                <h5 class="fonyt-weigth-bold">Hora: <span class="font-weight-light text-center">11 : 55</span></h5>
+                                <label>
+                                    <h5 class="font-weigth-bold">Hora:</h5>
+                                </label>
+                                <input type="text" class="form-control" disabled readonly required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h5 class="fonyt-weigth-bold">Direccion: <span class="font-weight-light text-center">Direccion</span></h5>
+                                <label>
+                                    <h5 class="font-weigth-bold">Direccion:</h5>
+                                </label>
+                                <input type="text" class="form-control" disabled readonly required>
                             </div>
                             <div class="col">
-                                <h5 class="fonyt-weigth-bold">Localidad: <span class="font-weight-light text-center">Rawson</span></h5>
+                                <label>
+                                    <h5 class="font-weigth-bold">Localidad:</h5>
+                                </label>
+                                    <input type="text" class="form-control" disabled readonly required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label>
+                                    <h5 class="font-weigth-bold">Teléfono:</h5>
+                                </label>
+                                <input type="tel" class="form-control" disabled readonly required>
+                            </div>
+                            <div class="col">
+                                <label>
+                                    <h5 class="font-weigth-bold">Autor Reporte:</h5>
+                                </label>
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col">
-                                <h5 class="fonyt-weigth-bold">Teléfono: <span class="font-weight-light text-center">2804-123456</span></h5>
-                            </div>
-                            <div class="col mx-sm-3 mb-2">
-                                <h5 class="fonyt-weigth-bold">Autor Reporte:</h5>
-                                <input type="text" class="form-control" value="Dirección de Estadísticas">
-                            </div>
-                        </div>
-
-<!--############################### Fin de la pantalla de los pasos 1 #################################################-->
-                        <div class="row">
-                            <div class="col">
-                                <h5 class="fonyt-weigth-bold">Categoría Reporte</h5>
-                                <select class="form-control">
+                                <label for="categoria">
+                                    <h5>Categoria</h5>
+                                </label>
+                                <select id="categoria" name="categoria" class="form-control"><!--Datos traidos de la BBDD--></select>
                                 </select>
                             </div>
                         </div>
                     
                         <div class="row">
                             <div class="col">
-                                <h5 class="fonyt-weigth-bold">Titulo: </h5>
-                                <input type="text" class="form-control" placeholder="Titulo del reclamo">
+                                <label>
+                                    <h5 class="font-weigth-bold">Titulo:</h5>
+                                </label>
+                                <input type="text" class="form-control" required placeholder="Titulo" name="titulo">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h5 class="fonyt-weigth-bold">Breve Descripción:</h5>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <label>
+                                    <h5 class="font-weigth-bold">Breve Descripción:</h5>
+                                </label>
+                                <textarea class="form-control" rows="3" name="breve-descripcion"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h5 class="fonyt-weigth-bold">Orígen</h5>
-                                <input type="radio" name="origen">Interno
-                                <input type="radio" name="origen">Externo
+                                <label>
+                                    <h5 class="font-weigth-bold">Orígen</h5>
+                                </label>
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col">
+                                <input type="radio" name="origen" value="interno">Interno<br>
+                                <input type="radio" name="origen" value="externo">Externo
+                            </div>
                             <div class="col">
                                 <input type="radio" name="tipo-origen">Uso<br>
-                                <input type="radio" name="tipo-origen">Mal uso<br>
+                                <input type="radio" name="tipo-origen">Mal uso
+                            </div>
+                            <div class="col">
                                 <input type="radio" name="tipo-origen">Accidental<br>
-                                <input type="radio" name="tipo-origen">Otro<br>
+                                <input type="radio" name="tipo-origen">Otro
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h5 class="fonyt-weigth-bold">Perdida:</h5>
+                                <label>
+                                    <h5 class="font-weigth-bold">Perdida:</h5>
+                                </label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <input type="checkbox">Edificio<br>
-                                <input type="checkbox">Ambiente
+                                <input name="perdida" type="checkbox">Edificio<br>
+                                <input name="perdida" type="checkbox">Ambiente
                             </div>
                             <div class="col">
-                                <input type="checkbox">Mobiliario<br>
-                                <input type="checkbox">Vehiculo
+                                <input name="perdida" type="checkbox">Mobiliario<br>
+                                <input name="perdida" type="checkbox">Vehiculo
                             </div>
                             <div class="col">
-                                <input type="checkbox">Información<br>
-                                <input type="checkbox">Personas
+                                <input name="perdida" type="checkbox">Información<br>
+                                <input name="perdida" type="checkbox">Personas
                             </div>
                         </div>
-                    </div>
-<!--############################### Fin de la pantalla de los pasos 2 #################################################-->
-                    <div class="detalle-elemento oculto" id="detalle-elemento">
+                    </fieldset>
+                    
+<!--############################### Pantalla de Detalles del Elemento #################################################-->
+                    <fieldset class="formulario oculto" id="detalle-elemento">
+                        <div id="contenedor-falla">
+                            <div class="falla">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>
+                                            <h5 class="font-weigth-bold">Categoría:</h5>
+                                        </label>
+                                            <input type="text" class="text-muted form-control" id="categoria-elegida" readonly value="Estructura">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="elemento">Elemento</label>
+                                        <select class="form-control" id="elemento" name="elemento" required><!--Datos traidos de la BBDD--></select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="sub-elemento">Sub-Elemento</label>
+                                        <select class="form-control" id="sub-elemento" name="sub-elemento" required><!--Datos traidos de la BBDD--></select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="falla">Falla</label>
+                                        <select class="form-control" id="falla" name="falla" required> <!--Datos traidos de la BBDD--></select>
+                                    </div>
+                                </div>
+                                <button class="btn-borrar oculto">Borrar</button>
+                            </div>
+                        </div>
+                        <button id="btn-nuevo" class="btn">Nuevo</button>
                         <div class="row">
                             <div class="col">
-                                <h5 class="fonyt-weigth-bold">Categoría: <span class="text-muted" id="categoria-elegida">Categoria seleccionado</span></h5>
+                                <label>
+                                    <h5 class="font-weigth-bold">Descripción:</h5>
+                                </label>
+                                <textarea class="form-control" rows="3" name="descripcion"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label>Elemento</label>
-                                <div id="elementos"></div>
-                            </div>
-                            <div class="col">
-                                <label>Sub-Elemento</label>
-                                <div id="sub_elementos"></div>
-                            </div>
-                            <div class="col">
-                                <label>Falla</label>
-                                <div id="falla"></div>
+                                <label>
+                                    <h5 class="font-weigth-bold">Número de Serie:</h5>
+                                </label>
+                                <input type="text" name="nro-serie" class="form-control">
                             </div>
                         </div>
+                    </fieldset>
+<!--############################### Pantalla de Detalles del Elemento #################################################-->
+                    <fieldset class="formulario oculto" id="archivo-adjunto">
+                        <h1>A revisar</h1>
+                    </fieldset>
+<!--############################### Pantalla de Prioridades #################################################-->
+                    <fieldset class="formulario oculto" id="prioridades">
+                        <label>
+                            <h5>¿Qué importancia tiene el elemento para asegurar la presencialidad?</h5>
+                        </label>
+                        <div class="row">
+                            <div class="col">
+                                <input name="importancia" type="checkbox">Insignificante<br>
+                                <input name="importancia" type="checkbox">Bajo
+                            </div>
+                            <div class="col">
+                                <input name="importancia" type="checkbox">Medio<br>
+                                <input name="importancia" type="checkbox">Alto
+                            </div>
+                        </div>
+                        <label>
+                            <h5>¿Cúal es la probabilidad de suspención de la presencialidad a corto plazo?</h5>
+                        </label>
+                        <div class="row">
+                            <div class="col">
+                                <input name="importancia" type="checkbox">Insignificante<br>
+                                <input name="importancia" type="checkbox">Bajo
+                            </div>
+                            <div class="col">
+                                <input name="importancia" type="checkbox">Medio<br>
+                                <input name="importancia" type="checkbox">Alto
+                            </div>
+                        </div>
+                        <label>
+                            <h5>¿Qué porcentaje de matricula se ve afectado directamente por la falla?</h5>
+                        </label>
+                        <div class="row">
+                            <div class="col">
+                                <input name="importancia" type="checkbox">0-25%<br>
+                                <input name="importancia" type="checkbox">25-50%
+                            </div>
+                            <div class="col">
+                                <input name="importancia" type="checkbox">50-75%<br>
+                                <input name="importancia" type="checkbox">75-100%
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="container text-center">
+                        <input type="submit" value="Generar reporte">
                     </div>
                 </form>
             </div>
@@ -225,22 +330,6 @@
     <?php
     require 'sigied/footer.php';
     ?>
-
-<script>
-    const pasos = document.getElementById('pasos')
-
-    pasos.addEventListener('click', (e)=>{
-        if(e.target.classList.contains('lista-pasos')){
-            if(e.target.textContent == 'Detalle de Elemento'){
-                document.querySelector('.seleccionado').classList.remove('seleccionado')
-                e.target.classList.add('seleccionado')
-                document.getElementById('detalle-elemento').classList.remove('oculto')
-                document.getElementById('datos-generales').classList.add('oculto')
-                document.getElementById('titulo').textContent = 'Detalles del elemento'
-            }
-        }
-    })
-</script>
-
+<script type="text/javascript" src="js/nuevo_reclamo.js"></script>
 </body>
 </html>
