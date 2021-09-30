@@ -74,12 +74,11 @@ body{
 }
 /* -------- Estilos Pie de Pagina -------- */
 .footer {
-  height: 70px;
+  width: 100%;
+  height: 65px; 
   position: relative;
-  margin-top: 100px;
   bottom: 0;
-  background-color: #424242;
-  color: #fff;
+  background-color: rgba(128, 125, 125, 0.521);
 }
 
 .footer-contenido {

@@ -2,7 +2,8 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
+<br>
+<br>
 <footer class="navbar-fixed-bottom footer">
 
     <div class="container">
