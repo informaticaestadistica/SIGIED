@@ -182,7 +182,7 @@
                   <td>4</td>
                   <td>260056600</td>
                   <td>775</td>
-                  <td>Colegio N° 775</td>
+                  <td>Colegio 775</td>
                   <td>II</td>
                   <td>Pto. Madryn</td>
                   <td>Media</td>

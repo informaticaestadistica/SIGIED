@@ -75,7 +75,7 @@ body{
 @media screen and (min-width: 760px) {
   .menu{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     transform: translateY(0);
   }
   .menu-item{

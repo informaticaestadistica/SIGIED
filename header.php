@@ -1,25 +1,17 @@
-<div class="hearder--logo">
-            <img src="images/SiGied_logo_b" class="img-logo-Sigied">
-        	<div class="icon-menu" id="icon-menu">
-    			<i class="fas fa-bars" class="icon"></i>
-        	</div>
+<div class="page-header">
+        <img src="img/SiGiEd_logo_b.png" class="float-left logoMC" style="width: 300px; height: 60px; padding-left: 40px; padding-top: 5px">
+        <img src="img/CHLogo.png" class="float-right logoCH" style="width: 190px; height: 60px; padding-right: 45px; padding-top: 10px">
         </div>
+        <div >
         <nav class="navbar">
-            <ul class="menu" id="menu-principal">
-                <li class="menu-item">
-                    <a class="menu-link" href="#">Inicio
-                	</a>
-                </li>
-                <li class="menu-item">
-                    <a class="menu-link" href="#" class="seleccionado">Todos los reclamo</a></li>
-                <li class="menu-item">
-                    <a class="menu-link" href="#">Nuevo reclamo</a>
-                </li>
-                <li class="menu-item">
-        		  <a class="menu-link" href="#">Salir</a></li>
+        <ul class="menu" id="menu-principal" >
+        <a href="#menu" class="box-shadow-menu" id="Menu"></a>
+            <li class="menu-item">
+                <a class="menu-link" href="Index.php">Salir</a>
+            </li>
             </ul>
         </nav>
-    </header>
+        </div>
     <div class="franja-central">
     </div>
     <script type="text/javascript" src="js/animacion_menu.js"></script>

@@ -1,8 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
     <title>Sigied: Inicio</title>
+    <?php
+        require 'head.php';
+    ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel = "icon" href = "img/SiGiEd.png" type = "image/png"> 
@@ -60,47 +64,129 @@
     .oculto{
         display: none;
     }
+    #sidebar {
+      width: 250px;
+      position: absolute;
+      top: 150px;
+      left: 0;
+      height: 100vh;
+      z-index: 999;
+      background:  #64b6d1;
+      color: #fff !important;
+      transition: all 0.3s;
+    }
 
+    #sidebar.active {
+      margin-left: -250px;
+    }
+    
+    #sidebar .sidebar-header {
+      padding: 20px;
+      background:  #64b6d1;
+    }
+    
+    #sidebar ul.components {
+      padding: 20px 0;
+      border-bottom: 1px solid #47748b;
+    }
+    
+    #sidebar ul p {
+      color: #fff;
+      padding: 10px;
+    }
+    
+    #sidebar ul li a {
+      padding: 10px;
+      font-size: 1.1em;
+      display: block;
+      color:white;
+    }
+    
+    #sidebar ul li a:hover {
+      color: #7386D5;
+      background: #fff;
+    }
+    
+    #sidebar ul li.active>a,
+    a[aria-expanded="true"] {
+      color: #fff;
+      background: #a2c3ce;
+    }
 
+    #sidebarCollapse span {
+        display: none;
+      }
+
+      .box-shadow-menu {
+        position: relative;
+        padding-left: 1.25em;
+        }
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.15em;
+  width: 1.15em;
+  height: 0.15em;
+  background: #8cc1d1;
+  box-shadow: 
+    0 0.25em 0 0 #8cc1d1,
+    0 0.5em 0 0 #8cc1d1;
+}
 
 </style>
 
 <body>
-	<header class="header">
-        <div class="hearder-logo">
-            <img src="img/SiGiEd_logo_b.png" class="img-logo-Sigied">
-            
-        </div>
-        <div>
-        <nav class="navbar">
-            <ul>
-                <a href="Index.php">Salir</a>
-            </ul>
-        </nav>
-        </div>
-    </header>
-    <div class="franja-central">
-    </div>
+
+    <?php
+            require 'header.php';
+    ?>
+
+   
     <main class="main">
- 
-  
-
-
     	<div class="pantalla-nuevo-reclamo">
         
             <div class="pantalla-pasos-reclamo">
-                <div class="contenedor-pasos">
-                     
-                         <li class="lista-pasos ">Inicio</li> 
-                         <li class="lista-pasos">Reportes creados</li>
-                         <li class="lista-pasos">Reportes en proceso</li>
-                         <li class="lista-pasos">Reportes cerrados</li>
-                         <li class="lista-pasos">Mapas</li>
-                         <li class="lista-pasos">Estadísticas</li>
-                         <li class="lista-pasos">Nuevo Reporte</li>
-                         <li class="lista-pasos">Editar Reporte</li>
-                     
-                </div>
+                            <nav id="sidebar">
+                            <div class="sidebar-header">
+                                <h3>Menú </h3>
+                                </h3>
+                            </div>
+
+                            <ul class="list-unstyled components">
+                                <li class="active">
+                                <a href="#menu">Inicio</a>
+
+                                </li>
+                                <li>
+                                <a href="#menu">Reportes Creados</a>
+
+
+                                </li>
+                                <li>
+                                <a href="#menu">Reportes en Proceso</a>
+                                </li>
+                                <li>
+                                <a href="#">Reportes Cerrados</a>
+                                </li>
+                                <li>
+                                <a href="#">Mapas</a>
+                                </li>
+                                <li>
+                                <a href="#">Estadísticas</a>
+                                </li>
+                                <li>
+                                <a href="#">Nuevo Reporte</a>
+                                </li>
+                                <li>
+                                <a href="#">Editar Reporte</a>
+                                </li>
+
+
+                            </ul>
+
+
+                            </nav>
             </div>
             <div class="contenedor-reporte">
                 <form action="#" method="POST">
@@ -376,15 +462,28 @@
         </div>
 	</main>
 	
-	<script type="text/javascript">
-	function salir(){
-
-	}
-	</script>
 
     <?php
     require 'Footer.php';
     ?>
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <!-- Bootstrap Js CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+
+      $('#Menu').on('click', function() {
+        $('#sidebar').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
 
 </body>
 </html>

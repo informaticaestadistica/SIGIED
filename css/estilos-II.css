@@ -22,7 +22,7 @@ body{
     margin-left: 50px;
   }
 
--------- Estilos Menu de navegacion -------- */
+/*-------- Estilos Menu de navegacion -------- */
 .navbar {
   display: flex;
   padding: 1rem 2rem;
@@ -74,7 +74,7 @@ body{
 }
 /* -------- Estilos Pie de Pagina -------- */
 .footer {
-  height: 150px;
+  height: 70px;
   position: relative;
   margin-top: 100px;
   bottom: 0;
@@ -140,3 +140,20 @@ body{
     .oculto{
         display: none;
     }
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
